@@ -1,1 +1,36 @@
+/**Basic reset**/
+/* Resetting margins, paddings, and borders */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
+/* Global box-sizing rule */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/**Main Page**/
+@import url("https://use.typekit.net/hfb1ifx.css");
+
+h1,h2,h3,h4,h5,h6,a{
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*header*/
+nav{
+    height: 8vh;
+    width: 30vw;
+    background-color: #e396d9;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
