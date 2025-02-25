@@ -1,12 +1,22 @@
-<?php
-include_once "./includes/head.php";
-?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakash's Portfolio Page</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');</style>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/indexStyles.css">
+</head>
 
 <body>
-    <link rel="stylesheet" href="./css/indexStyles.css">
-    <?php
-    include_once "./includes/nav.php";
-    ?>
+    <nav class="flex justify-evenly align-center gap-2">
+        <a class="flex align-center justify-center w-full h-full nav-left" href="#">My Works</a>
+        <img src="./imgs/Logo-Main.svg" alt="My Logo">
+        <a class="flex align-center justify-center w-full h-full nav-right" href="#">About Me</a>
+    </nav>
+
     <section id="about" class="flex align-center gap-3">
         <img src="./imgs/MePic.png" alt="Pic Of Me" class="w-1/2">
         <div class="flex flex-col justify-around h-full">
@@ -14,14 +24,20 @@ include_once "./includes/head.php";
             <p>I am a full-stack developer, with experience in both the front and back end of websites.</p>
         </div>
     </section>
+
     <section id="projects"></section>
+
     <section id="skills"></section>
+    
     <section id="thanks">
         <div id="tiles"></div>
     </section>
-    <?php
-    include_once "./includes/footer.php"
-    ?>
+
+    <footer class="flex flex-col justify-center align-center gap">
+        <h6>ZWhirl</h6>
+        <h6>8904 1137</h6>
+        <h6>aakash.raj.rai1027@gmail.com</h6>
+    </footer>
 </body>
 </html>
 
