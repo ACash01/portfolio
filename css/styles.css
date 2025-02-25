@@ -15,22 +15,100 @@ fieldset, legend {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+/** End of Basic Reset **/
 
-/**Main Page**/
-@import url("https://use.typekit.net/hfb1ifx.css");
-
-h1,h2,h3,h4,h5,h6,a{
-    font-family: futura-pt, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/** Specific CSS **/
+h1, h2, h3, h4, h5, h6, button {
+  font-family: "Source Code Pro", serif;
 }
 
-/*header*/
-nav{
-    height: 8vh;
-    width: 30vw;
-    background-color: #e396d9;    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+p, a, span, label {
+  font-family: "Akshar", serif;
 }
+
+body {
+  background-color: black;
+}
+
+nav {
+  height: 12vh;
+}
+
+nav img {
+  height: 80%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-left {
+  background-color: #00B2FF;
+  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0%);
+}
+
+.nav-right {
+  background-color: #A741F5;
+  clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 100% 0%);
+}
+
+footer {
+  height: 15vh;
+  background-color: #F541A4;
+  color: white;
+}
+
+/** Reuseable Classes **/
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.gap {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+/** End of Reuseable Classes **/
