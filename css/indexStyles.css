@@ -1,11 +1,6 @@
-#about {
-    min-height: 45vh;
-    padding: 0.75rem;
-    color: white;
-}
-
-#thanks {
-    height: 75vh;
+#intro {
+    position: relative;
+    height: 45vh;
     width: 100vw;
 }
 
@@ -26,21 +21,61 @@
     background: linear-gradient(
         to right,
         #EC41F5,
-        #F541A4,
         #FF3374,
+        #F541A4,
         #A741F5,
-        #EC41F5);
-    background-size: 200%;
-    animation: gradient-loop 5s linear infinite;
-}
+        #EC41F5
+    );
+    background-size: 200%;    
+    animation: gradient-loop 4s linear infinite;
+}    
 
 .tile {
     position: relative;
-}
+}    
 
 .tile::before {
     background-color: rgb(20,20,20);
     content: "";
     position: absolute;
     inset: 1.5px;
+}    
+
+.container {
+    pointer-events: none;
+    padding: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    z-index: 1;
+    color: white;
 }
+
+.toggled {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+#projects, #selfDesc {
+    padding: 0.75rem;
+    color: white;
+}            
+
+#projects {
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 10vh);
+}            
+
+#projects div img{
+    object-fit: cover;
+}
+
+.proj-shadow {
+    background-color: rgba(0,0,0,0.6);
+}
+
+@media (min-width: 360px) {}
+@media (min-width: 600px) {}
+@media (min-width: 1024px) {}
+@media (min-width: 1440px) {}
+@media (min-width: 1920px) {}

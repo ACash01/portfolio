@@ -53,6 +53,24 @@ a {
   clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 100% 0%);
 }
 
+.sectDiv {
+  width: 100vw;
+  min-height: 3vh;
+  margin: 4vh 0;
+}
+
+.break1 {
+  background-color: #ec41f5;
+}
+
+.break2 {
+  background-color: #f541a4;
+}
+
+.break3 {
+  background-color: #ff3374;
+}
+
 footer {
   height: 15vh;
   background-color: #F541A4;
@@ -60,6 +78,19 @@ footer {
 }
 
 /** Reuseable Classes **/
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .flex {
   display: flex;
 }
@@ -88,6 +119,38 @@ footer {
   align-items: center;
 }
 
+.j-i-center {
+  justify-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.row-span-4 {
+  grid-row: span 4 / span 4;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .h-full {
   height: 100%;
 }
@@ -111,4 +174,25 @@ footer {
 .gap-3 {
   gap: 0.75rem;
 }
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.text-md {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
 /** End of Reuseable Classes **/
+
+/** Tablet Size Classes **/
+@media(min-width: 600px) {
+  nav {
+    height: 8vh;
+  }
+}
