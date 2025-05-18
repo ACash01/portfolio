@@ -37,9 +37,16 @@
 .tile::before {
     background-color: rgb(20,20,20);
     content: "";
+    background: url('../imgs/tap.svg') center center / 50% no-repeat rgb(20,20,20);
     position: absolute;
     inset: 1.5px;
-}    
+}
+
+@media (min-width:1024px) {
+    .tile::before {
+        background-image: url('../imgs/click.svg');
+    }
+}
 
 .container {
     pointer-events: none;
