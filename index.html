@@ -11,16 +11,17 @@
 <body>
     <link rel="stylesheet" href="./css/indexStyles.css">
     <nav class="flex justify-evenly align-center gap-2">
-        <a class="flex align-center justify-center w-full h-full nav-left" href="./works.html">My Works</a>
-        <a class="flex align-center justify-center h-full" href="index.html"><img src="./imgs/Logo-Main.svg" alt="My Logo"></a>
-        <a class="flex align-center justify-center w-full h-full nav-right" href="./about.html">About Me</a>
+        <a class="flex font-reg align-center justify-center w-full h-full nav-left" href="./works.html">My Works</a>
+        <a class="flex font-reg align-center justify-center h-full" href="index.html"><img src="./imgs/Logo-Main.svg" alt="My Logo"></a>
+        <a class="flex font-reg align-center justify-center w-full h-full nav-right" href="./about.html">About Me</a>
     </nav>
     <section id="intro">
         <div class="container absolute flex justify-center align-center gap-3">
-            <img src="./imgs/MePic.png" alt="Pic Of Me" class="w-1/2">
+            <img src="./imgs/MePic.png" alt="Pic Of Me" style="max-height: 30vh; max-width: 50%;">
             <div class="flex flex-col justify-center h-full">
-                <h3>Hello!</h3>
-                <p>I am a full-stack developer, with experience in both the front and back end of websites.</p>
+                <h1 class="font-lg">Hello!</h3>
+                <p class="font-md">My name is Aakash and I am a hopeful full-stack developer.</p>
+                <p class="font-md hidden tb-block">This portfolio page is a good collection of all my biggest projects(so far), and as such i hope you enjoy learning about them as much as I enjoyed partaking in them! There is also a secret page to access, so have fun finding it :></p>
             </div>
         </div>
         <div id="tiles"></div>
@@ -28,44 +29,48 @@
 
     <div class="sectDiv break1"></div>
     
-    <section id="selfDesc" class="flex flex-col justify-evenly gap-4">
-        <h2 class="text-center">My Qualities as a Web Developer</h2>
-        <div class="grid grid-cols-2 gap-2 j-i-center">
-            <p class="text-md">Team Player</p>
-            <p class="text-md">Problem Solver</p>
-            <p class="text-md">Logical Thinker</p>
-            <p class="text-md">Creative Designer</p>
+    <section id="selfDesc" class="flex flex-col justify-evenly gap-7 align-center relative">
+        <h1 class="font-lg text-center">My Qualities as a Web Developer</h2>
+        <div id="qualities" class="grid grid-cols-2 row-gap-5 j-i-center">
+            <p class="font-md">Team Player</p>
+            <p class="font-md">Problem Solver</p>
+            <p class="font-md">Logical Thinker</p>
+            <p class="font-md">Creative Designer</p>
         </div>
+        <img src="./imgs/circletC1.svg" alt="Flavour image" id="fl1">
+        <img src="./imgs/fourStarM3.svg" alt="Flavour image" id="fl2">
     </section>
     
     <div class="sectDiv break2"></div>
     
     <section id="projects" class="grid gap-3">
-        <h2 class="col-span-2">My Best Projects</h2>
-        <div class="projectW col-span-2 row-span-2 w-full h-full relative">
+        <h1 class="font-lg col-span-all">My Best Projects</h2>
+        <div class="col-span-2 row-span-2 w-full h-full relative t:c-span-reset t:r-span-4">
             <div class="absolute proj-shadow flex justify-center align-center w-full h-full">
-                <p class="text-center">City Of Good</p>
+                <p class="font-reg text-center">City Of Good</p>
             </div>
             <img src="./imgs/aakashrajrai-665Q-portfolio-1-1.jpg" alt="Work 1" class="w-full h-full">
         </div>
-        <div class="projectH row-span-4 w-full h-full relative">
+        <div class="row-span-4 w-full h-full relative">
             <div class="absolute proj-shadow flex justify-center align-center w-full h-full">
-                <p class="text-center">Heartland Innovation Challenge</p>
+                <p class="font-reg text-center">Heartland Innovation Challenge</p>
             </div>
             <img src="./imgs/aakashrajrai-665Q-portfolio-2-1.jpg" alt="Work 2" class="w-full h-full">
         </div>
-        <div class="projectH row-span-4 w-full relative">
+        <div class="row-span-4 w-full relative">
             <div class="absolute proj-shadow flex justify-center align-center w-full h-full">
-                <p class="text-center">Cake Of Fun</p>
+                <p class="font-reg text-center">Cake Of Fun</p>
             </div>
             <img src="./imgs/aakashrajrai-665Q-portfolio-3-3.png" alt="Work 3" class="w-full h-full">
         </div>
     </section>
  
-    <footer class="flex flex-col justify-center align-center gap">
-        <h6>ZWhirl</h6>
-        <h6>8904 1137</h6>
-        <h6>aakash.raj.rai1027@gmail.com</h6>
+    <footer class="flex flex-col justify-center align-center gap relative">
+        <p></p>
+        <h1 class="font-sm">ZWhirl</h6>
+        <h1 class="font-sm">8904 1137</h6>
+        <h1 class="font-sm">aakash.raj.rai1027@gmail.com</h6>
+        <a href="secrets.html" tabindex="-1" style="height: 10px; width: 10px; position: absolute; left: 50%; right: 50%; top: 0;"></a>
     </footer>
 </body>
 </html>
@@ -76,7 +81,6 @@
     let columns = 0
     let rows = 0
     let screenSize = window.innerWidth
-
     let toggled = false
 
     const handleOnClick = index => {
@@ -109,7 +113,7 @@
             anime({
                 targets: ".tile",
                 opacity: toggled ? 0 : 1,
-                delay: anime.stagger(25, {
+                delay: anime.stagger(55, {
                     grid: [columns, rows],
                     from: index
                 })
@@ -118,7 +122,7 @@
             anime({
                 targets: ".tile",
                 opacity: toggled ? 0 : 1,
-                delay: anime.stagger(15, {
+                delay: anime.stagger(40, {
                     grid: [columns, rows],
                     from: index
                 })
@@ -127,7 +131,7 @@
             anime({
                 targets: ".tile",
                 opacity: toggled ? 0 : 1,
-                delay: anime.stagger(25, {
+                delay: anime.stagger(40, {
                     grid: [columns, rows],
                     from: index
                 })
@@ -140,6 +144,11 @@
         const tile = document.createElement("div")
 
         tile.classList.add('tile')
+        if (!(/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+            tile.classList.add('dt-click')
+        }
+        
+        
 
         tile.onclick = e => handleOnClick(index)
 
@@ -163,14 +172,14 @@
             columns = Math.floor(document.body.clientWidth / 50)
             rows = Math.floor(document.body.clientWidth / 100)
         } else if (screenSize < 1440) {
-            columns = Math.floor(document.body.clientWidth / 100)
-            rows = Math.floor(document.body.clientWidth / 145)
+            columns = Math.floor(document.body.clientWidth / 90)
+            rows = Math.floor(document.body.clientWidth / 180)
         } else if (screenSize < 1920) {
-            columns = Math.floor(document.body.clientWidth / 40)
-            rows = Math.floor(document.body.clientWidth / 55)
+            columns = Math.floor(document.body.clientWidth / 90)
+            rows = Math.floor(document.body.clientWidth / 190)
         } else {
-            columns = Math.floor(document.body.clientWidth / 40)
-            rows = Math.floor(document.body.clientWidth / 55)
+            columns = Math.floor(document.body.clientWidth / 120)
+            rows = Math.floor(document.body.clientWidth / 220)
         }
 
 

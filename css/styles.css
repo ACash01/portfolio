@@ -45,16 +45,29 @@ a {
 
 .nav-left {
   background-color: #00B2FF;
-  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 80% 100%);
+  border: 0.8rem solid #00B2FF;
+  transition: .5s; 
+}
+
+.nav-left:hover, .nav-left:focus {
+  background-color: #000;
+  color: #00B2FF;
 }
 
 .nav-right {
   background-color: #A741F5;
   clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 100% 0%);
+  border: 0.8rem solid #A741F5;
+  transition: .5s; 
+}
+
+.nav-right:hover, .nav-right:focus {
+  background-color: #000;
+  color: #A741F5;
 }
 
 .sectDiv {
-  width: 100vw;
   min-height: 3vh;
   margin: 4vh 0;
 }
@@ -89,6 +102,10 @@ footer {
 
 .relative {
   position: relative;
+}
+
+.hidden{
+  display: none;
 }
 
 .flex {
@@ -135,6 +152,10 @@ footer {
   grid-column: span 2 / span 2;
 }
 
+.col-span-all {
+  grid-column: 1 / -1;
+}
+
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
@@ -179,12 +200,30 @@ footer {
   gap: 1rem;
 }
 
-.text-md {
+.gap-7 {
+  gap: 1.75rem;
+}
+
+.row-gap-5 {
+  row-gap: 1.25rem;
+}
+
+.font-sm {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+.font-reg {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.font-md {
   font-size: 1.125rem;
   line-height: 1.125rem;
 }
 
-.text-lg {
+.font-lg {
   font-size: 1.25rem;
   line-height: 1.25rem;
 }
@@ -194,5 +233,84 @@ footer {
 @media(min-width: 600px) {
   nav {
     height: 8vh;
+  }
+
+  .t\:c-span-reset {
+    grid-column: unset;
+  }
+
+  .t\:r-span-4 {
+    grid-row: span 4 / span 4;
+  }
+  
+  .tb-block {
+    display: block;
+  }
+
+  .font-sm {
+    font-size: 0.95rem;
+    line-height: 0.95rem;
+  }
+  
+  .font-reg {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  
+  .font-md {
+    font-size: 1.3rem;
+    line-height: 1.35rem;
+  }
+  
+  .font-lg {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+/** End of Tablet Size Classes **/
+
+/** Sm Laptop Size Classes **/
+@media(min-width: 1024px) {
+  .SmL-block {
+    display: block;
+  }
+}
+
+@media(min-width: 1440px) {
+  .font-reg {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+  .font-md {
+    font-size: 1.45rem;
+    line-height: 1.55rem;
+  }
+
+  .font-lg {
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media(min-width: 1920px) {
+  .font-sm {
+    font-size: 1.35rem;
+    line-height: 1.45rem;
+  }
+
+  .font-reg {
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+  }
+
+  .font-md {
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+  }
+
+  .font-lg {
+    font-size: 2rem;
+    line-height: 2.1rem;
   }
 }

@@ -1,7 +1,6 @@
 #intro {
     position: relative;
     height: 45vh;
-    width: 100vw;
 }
 
 @keyframes gradient-loop {
@@ -20,11 +19,14 @@
     grid-template-columns: repeat(var(--columns), 1fr);
     background: linear-gradient(
         to right,
+        #00B2FF,
+        #00B2FF,
         #EC41F5,
-        #FF3374,
         #F541A4,
-        #A741F5,
-        #EC41F5
+        #ff3374,
+        #F541A4,
+        #EC41F5,
+        #00B2FF
     );
     background-size: 200%;    
     animation: gradient-loop 4s linear infinite;
@@ -42,10 +44,10 @@
     inset: 1.5px;
 }
 
-@media (min-width:1024px) {
-    .tile::before {
-        background-image: url('../imgs/click.svg');
-    }
+
+.tile.dt-click::before {
+    background-image: url('../imgs/click.svg');
+    background-size: 40%
 }
 
 .container {
@@ -65,7 +67,37 @@
 #projects, #selfDesc {
     padding: 0.75rem;
     color: white;
+    overflow: hidden;
 }            
+
+#qualities {
+    width: 100%;
+    max-width: 500px;
+}
+
+#fl1 {
+    position: absolute;
+    height: 40%;
+    top: 25%;
+    left: -10%;
+}
+
+#fl2 {
+    position: absolute;
+    height: 20%;
+    top: 30%;
+    right: 8%;
+}
+
+@media (min-width: 425px) {
+    #fl1 {
+        left: -6%;
+    }
+    #fl2 {
+        right: 11%;
+    }
+       
+}
 
 #projects {
     justify-items: center;
@@ -81,8 +113,46 @@
     background-color: rgba(0,0,0,0.6);
 }
 
-@media (min-width: 360px) {}
-@media (min-width: 600px) {}
-@media (min-width: 1024px) {}
+/** Tablet Size **/
+@media (min-width: 600px) {
+    #projects {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(5, 10vh);
+    }
+    
+    #fl1 {
+        height: 55%;
+        top: 35%;
+        left: -1%;
+    }
+    
+    #fl2 {
+        height: 30%;
+        top: 25%;
+        right: 3%;
+    }
+}
+
+@media (min-width: 900px) {
+    #fl1 {
+        left: 7%;
+    }
+
+    #fl2 {
+        height: 35%;
+        right: 11%;
+    }
+}
+
+/** Sm Laptop Size **/
+@media (min-width: 1024px) {
+    #intro div:first-child div {
+        width: 50%;
+    }
+}
+
+/** Md Laptop Size **/
 @media (min-width: 1440px) {}
+
+/** Lg Laptop Size **/
 @media (min-width: 1920px) {}
